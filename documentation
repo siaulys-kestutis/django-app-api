@@ -46,5 +46,15 @@ Test stages:
 In TDD:
 write the tests for expected behaviour (and make sure it fails) -> implement the code to make the test pass (this ensures that the original test did NOT have bugs in it itself)
 This:
-i) Increases test converaga
+i) Increases test coverage
 ii) Ensures that tests work
+
+========================================================================
+DOCKER:
+docker build . : builds the docker image according to the DOCKERFILE
+DOCKER_COMPOSE: tool that allows to run our Docker image easily from our project
+location
+docker-compose build: does so according to the docker-compose.yml file
+
+The following creates the Django project:
+docker-compose run app sh -c "django-admin.py startproject app ."
