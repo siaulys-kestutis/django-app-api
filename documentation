@@ -1,0 +1,50 @@
+DJANGO:
+Object relational mapper (ORM): convert objects to database rows
+
+DJANGO ADMIN:
+- Out-of-the-box admin site
+- Manage models
+- Visualise database
+
+DJANGO REST FRAMEWORK:
+- Extension to Django
+- Built in authentication system (easy to add to the API endpoints)
+- Viewsets: create the structure of the API / provide all the necessary enpoints for managing objects
+- Serializers:
+i) validation of all the requests to the API
+ii) to convert Json objects to Django database models
+iii) Browsable API (useful for testing the endpoints in the browser)
+
+DOCKER:
+- Virtualisation tool
+- Isolate project dependencies from the machine it is running on
+- Lightweight virtual machine
+- Will wrap the project and all of its dependencies into a single Docker image - that can be run independently on any machine
+- Consistent dev environment
+- Could use the image for the deployment to the cloud platform (i.e. AWS)
+
+TRAVIS_CI:
+- Automate testing and linting
+- Integrates well with GitHub
+- Can configure to run automatically every time changes are made to the code
+
+PodygreSQL:
+- A production database
+- Easy to set up with Docker
+
+TDD:
+- Isolates the specific code to be tested:
+i) Functions
+ii) Class
+iii) API endpoints
+
+Test stages:
+1) Setup -> create sample DB objects
+2) Execution -> call the code
+3) Assertions -> confirm the correctes of the asserted output
+
+In TDD:
+write the tests for expected behaviour (and make sure it fails) -> implement the code to make the test pass (this ensures that the original test did NOT have bugs in it itself)
+This:
+i) Increases test converaga
+ii) Ensures that tests work
