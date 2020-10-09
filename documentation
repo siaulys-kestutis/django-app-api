@@ -58,3 +58,7 @@ docker-compose build: does so according to the docker-compose.yml file
 
 The following creates the Django project:
 docker-compose run app sh -c "django-admin.py startproject app ."
+
+TRAVIS CI:
+Travis CI configuration file: tells what Travis-CI should do every time we push
+a change to a project
