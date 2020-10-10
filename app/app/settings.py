@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'core',
 ]
 
 MIDDLEWARE = [
@@ -118,3 +119,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# The setting that refers to the actual class that is responsible for the user model
+# this is retrieved via the get_user_model method (see core/tests/test_models.py class)
+AUTH_USER_MODEL = 'core.User'
