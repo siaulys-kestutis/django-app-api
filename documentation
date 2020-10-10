@@ -62,3 +62,17 @@ docker-compose run app sh -c "django-admin.py startproject app ."
 TRAVIS CI:
 Travis CI configuration file: tells what Travis-CI should do every time we push
 a change to a project
+
+DJANGO UNIT TESTS:
+Django unit test framework looks for any files that begin with
+tests and basically uses them as tests when you run
+Django run unit test command
+(i.e. the class or folder must begin with the word test)
+
+All the test functions must begin with 'test' in their name
+
+Running the tests in this case is done:
+docker-compose run app sh -c "python manage.py test"
+
+Running the tests and linting is done:
+docker-compose run app sh -c "python manage.py test && flake8"
