@@ -76,3 +76,7 @@ docker-compose run app sh -c "python manage.py test"
 
 Running the tests and linting is done:
 docker-compose run app sh -c "python manage.py test && flake8"
+
+CREATING THE CUSTOM USER MODEL:
+Creating the core app (the command in the "" is exactly the same as before)
+docker-compose run app sh -c "python manage.py startapp core"
