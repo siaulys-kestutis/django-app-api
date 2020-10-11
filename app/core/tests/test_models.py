@@ -27,7 +27,7 @@ class ModelTests(TestCase):
             get_user_model().user_manager.create_user(email=None, password='somePassword')
 
     def test_create_create_new_superuser(self):
-        user = get_user_model().user_manager.create_super_user("somethin@gmail.com", 'test123')
+        user = get_user_model().user_manager.create_superuser("somethin@gmail.com", 'test123')
         # is_superuser is part of PermissionsMixin object
         self.assertTrue(user.is_superuser)
         self.assertTrue(user.is_staff)
