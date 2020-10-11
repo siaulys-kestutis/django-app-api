@@ -51,8 +51,8 @@ class CommandTests(TestCase):
     # patch replaces the behaviour of time.sleep with the function
     # that returns True
     # this is just to speed up the test
-    @patch('time.sleep', return_value=True)
-    def test_wait_for_db(self, ts):
+    #@patch('time.sleep', return_value=True)
+    def test_wait_for_db(self):
         """Test waiting for DB"""
         with patch('django.db.utils.ConnectionHandler.__getitem__') as gi:
             # the first five times one calls the __get_item
