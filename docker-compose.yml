@@ -25,3 +25,8 @@ services:
     - POSTGRES_DB=app
     - POSTGRES_USER=postgres
     - POSTGRES_PASSWORD=somepassword
+ waitfordb:
+   image: dadarek/wait-for-dependencies
+   depends_on:
+     - db
+   command: postgres:5432
