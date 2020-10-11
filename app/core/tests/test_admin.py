@@ -8,7 +8,7 @@ class AdminSiteTest(TestCase):
     # set up method that is run once before all the tests
     def setUp(self):
         self.client = Client()
-        self.admin_user = get_user_model().user_manager.create_super_user(email='admin@gmail.com', password='password')
+        self.admin_user = get_user_model().user_manager.create_superuser(email='admin@gmail.com', password='password')
         self.client.force_login(self.admin_user)
         self.user = get_user_model().user_manager.create_user(email='user@gmail.com', password='password', name='Test User')
 

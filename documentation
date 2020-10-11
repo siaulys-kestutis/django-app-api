@@ -9,7 +9,7 @@ DJANGO ADMIN:
 DJANGO REST FRAMEWORK:
 - Extension to Django
 - Built in authentication system (easy to add to the API endpoints)
-- Viewsets: create the structure of the API / provide all the necessary enpoints for managing objects
+- Viewsets: create the structure of the API / provide all the necessary endpoints for managing objects
 - Serializers:
 i) validation of all the requests to the API
 ii) to convert Json objects to Django database models
@@ -51,13 +51,16 @@ ii) Ensures that tests work
 
 ========================================================================
 DOCKER:
-docker build . : builds the docker image according to the DOCKERFILE
-DOCKER_COMPOSE: tool that allows to run our Docker image easily from our project
-location
-docker-compose build: does so according to the docker-compose.yml file
+DOCKER_COMPOSE: tool that allows to run our Docker image easily from our project location
+- docker build . : builds the docker image according to the DOCKERFILE
+- docker-compose build: does so according to the docker-compose.yml file
+- docker-compose up: this basically creates and starts the containers
 
-The following creates the Django project:
+- docker-compose run app sh -c "command":
+this runs the particular command specified in the parentheses, i.e.
 docker-compose run app sh -c "django-admin.py startproject app ."
+
+this would create the Django project
 
 TRAVIS CI:
 Travis CI configuration file: tells what Travis-CI should do every time we push
@@ -80,3 +83,10 @@ docker-compose run app sh -c "python manage.py test && flake8"
 CREATING THE CUSTOM USER MODEL:
 Creating the core app (the command in the "" is exactly the same as before)
 docker-compose run app sh -c "python manage.py startapp core"
+
+
+MOCKING:
+- Change the behaviour of the dependencies of the code one is testing
+- Avoids unintended side-effects
+- Also, never write tests that depend on external services
+
